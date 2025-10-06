@@ -417,7 +417,7 @@ class HeadLightToODOTConverter:
             for page in pdf.pages:
                 if '/Annots' in page:
                     for annot in page['/Annots']:
-                        annot_obj = annot.get_object()
+                        annot_obj = annot
                         if '/T' in annot_obj and '/FT' in annot_obj:
                             field_type = annot_obj['/FT']
                             field_title = annot_obj['/T']
@@ -442,7 +442,7 @@ class HeadLightToODOTConverter:
         for page in pdf.pages:
             if '/Annots' in page:
                 for annot in page['/Annots']:
-                    annot_obj = annot.get_object()
+                    annot_obj = annot
                     if '/T' in annot_obj and '/FT' in annot_obj:
                         field_type = annot_obj['/FT']
                         field_title = annot_obj['/T']
@@ -562,5 +562,4 @@ Q
                     target_page['/Contents'] = new_stream
                     
             except Exception as e:
-                print(f"Error embedding image {i+1}: {e}")
-                continue
+                print(f"
