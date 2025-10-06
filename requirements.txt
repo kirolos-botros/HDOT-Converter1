@@ -1,0 +1,6 @@
+streamlit
+pikepdf
+pytz
+Pillow
+pandas
+openpyxl
